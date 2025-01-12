@@ -9,6 +9,11 @@ const getQuestions = async (req: Request, res: Response) => {
   res.json(questions)
 }
 
+const getStaticQuestions = async (req: Request, res: Response) => {
+  const questions = await personalityService.getStaticPersonalityTest();
+  res.json(questions);
+};
+
 const submit = async (
   req: Request<any, any, z.infer<typeof testValidator.submission>>,
   res: Response
@@ -23,5 +28,6 @@ const submit = async (
 
 export default {
   getQuestions,
+  getStaticQuestions,
   submit,
 }

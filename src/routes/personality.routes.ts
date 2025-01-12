@@ -8,6 +8,11 @@ const router = Router()
 
 router.get("/questions", catchAsync(personalityController.getQuestions))
 
+router.get(
+  "/static-questions",
+  catchAsync(personalityController.getStaticQuestions)
+)
+
 router.post(
   "/submit",
   validator({ body: testValidator.submission }),
