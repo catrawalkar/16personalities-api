@@ -3,6 +3,7 @@ import validator from "@/middlewares/validator.middleware"
 import testValidator from "@/validators/test.validator"
 import { catchAsync } from "catch-async-express"
 import { Router } from "express"
+import test from "node:test"
 
 const router = Router()
 
