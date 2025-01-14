@@ -37,7 +37,8 @@ const session = wrapper(
           auth: {
             username: env.PROXY_USERNAME as string,
             password: env.PROXY_PASSWORD as string,
-          }
+          },
+          protocol: "http",
         }
       : false,
   })
